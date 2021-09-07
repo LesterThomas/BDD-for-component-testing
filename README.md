@@ -20,3 +20,40 @@ A list of features described in this way would be included in the *Golden Compon
 
 Generating automated tests from features
 ----------------------------------------
+
+Assuming you have created the feature in a file called `./features/IG1228-UC002-Browse-B2C-Catalogue.feature` you can run the test by typing:
+
+```
+./node_modules/.bin/cucumber-js ./features/IG1228-UC002-Browse-B2C-Catalogue.feature
+```
+You should see some warnings, because we haven’t told Cucumber.js how each step is actually implemented yet.The warnings are designed to help you develop the actual tests. For example, you will see something like:
+
+```
+Warnings:
+
+1) Scenario: Load the product categories # features\IG1228-UC002-Browse-B2C-Catalogue.feature:3
+   ? When we request the products categories
+       Undefined. Implement with the following snippet:
+
+         When('we request the products categories', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? Then we should receive list of categories
+       | category name            | description                       |
+       | Internet line of product | Fiber and ADSL broadband products |
+       | Mobile line of product   | Mobile phones and packages        |
+       | IoT line of product      | IoT devices and solutions         |
+       Undefined. Implement with the following snippet:
+
+         Then('we should receive list of categories', function (dataTable) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+```
+
+
+If you copy the code snippets into a file `./features/steps/IG1228-UC002-Steps.v1.js' and then fill in the actual test details, then you will see the tests start to succeed (or at least different warning messages!).
+
+There is a good tutorial on Cucumber javascript framework at https://www.testim.io/blog/cucumber-js-for-bdd-an-introductory-tutorial-with-examples/
