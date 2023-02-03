@@ -28,7 +28,7 @@ Assuming you have created the feature in a file called `./features/IG1228-UC002-
 ```
 You should see some warnings, because we haven’t told Cucumber.js how each step is actually implemented yet.The warnings are designed to help you develop the actual tests. For example, you will see something like:
 
-```
+```feature
 Warnings:
 
 1) Scenario: Load the product categories # features\IG1228-UC002-Browse-B2C-Catalogue.feature:3
