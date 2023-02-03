@@ -28,7 +28,7 @@ Assuming you have created the feature in a file called `./features/IG1228-UC002-
 ```
 You should see some warnings, because we haven’t told Cucumber.js how each step is actually implemented yet.The warnings are designed to help you develop the actual tests. For example, you will see something like:
 
-```gherkin
+```feature
 Warnings:
 
 1) Scenario: Load the product categories # features\IG1228-UC002-Browse-B2C-Catalogue.feature:3
@@ -57,3 +57,16 @@ Warnings:
 If you copy the code snippets into a file `./features/steps/IG1228-UC002-Steps.v1.js' and then fill in the actual test details, then you will see the tests start to succeed (or at least different warning messages!).
 
 There is a good tutorial on Cucumber javascript framework at https://www.testim.io/blog/cucumber-js-for-bdd-an-introductory-tutorial-with-examples/
+
+```feature
+Feature: Test Gherkin feature
+
+    Scenario: this is a scenario
+        Given some initial setup
+        When I perform some action
+        Then I get some result
+```
+
+
+
+Link to gherkin 
